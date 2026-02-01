@@ -15,10 +15,10 @@ const Hero = () => {
         <div className="absolute inset-0" style={{
           background: 'radial-gradient(circle at 50% 50%, rgba(176, 38, 255, 0.15) 0%, rgba(3, 0, 20, 0) 70%)'
         }} />
-        {[...Array(50)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-primary/30 rounded-full"
+            className="absolute w-1 h-1 bg-primary rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
