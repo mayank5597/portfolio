@@ -55,7 +55,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="block text-foreground">I didn't start as a</span>
-            <span className="block bg-gradient-to-r from-yellow-500 to-[#b026ff] bg-clip-text text-transparent mt-2">
+            <span className="block bg-gradient-to-r from-white to-[#b026ff] bg-clip-text text-transparent mt-2">
               MERN Developer.
             </span>
           </motion.h1>
