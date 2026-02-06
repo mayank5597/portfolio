@@ -1,21 +1,25 @@
 /* eslint-disable no-unused-vars */
-import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
-  const keywords = ['JavaScript', 'React', 'Node.js', 'MongoDB'];
+  const keywords = ["JavaScript", "React", "Node.js", "MongoDB"];
 
   return (
-    <section 
+    <section
       data-testid="hero-section"
       className="relative h-screen flex flex-col justify-center items-center overflow-hidden"
     >
       {/* Animated background particles */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0" style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(176, 38, 255, 0.15) 0%, rgba(3, 0, 20, 0) 70%)'
-        }} />
-        {[...Array(100)].map((_, i) => (
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 50%, rgba(176, 38, 255, 0.15) 0%, rgba(3, 0, 20, 0) 70%)",
+          }}
+        />
+        {[...Array(200)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-primary rounded-full"
@@ -43,7 +47,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <motion.h1 
+          <motion.h1
             data-testid="hero-title"
             className="text-6xl md:text-8xl font-heading font-bold tracking-tighter mb-8"
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +55,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="block text-foreground">I didn't start as a</span>
-            <span className="block gradient-text mt-2">MERN Developer.</span>
+            <span className="block bg-gradient-to-r from-white to-[#b026ff] bg-clip-text text-transparent mt-2">
+              MERN Developer.
+            </span>
           </motion.h1>
 
           <motion.p
@@ -61,7 +67,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            I started with <span className="text-accent font-bold">curiosity</span>.
+            I started with{" "}
+            <span className="text-accent font-bold">curiosity</span>.
           </motion.p>
         </motion.div>
 
@@ -74,13 +81,13 @@ const Hero = () => {
               className="px-6 py-3 bg-secondary/20 border border-primary/30 rounded-lg text-sm md:text-base font-mono text-accent backdrop-blur-sm"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ 
-                duration: 0.5, 
+              transition={{
+                duration: 0.5,
                 delay: 1 + index * 0.1,
               }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: '0 0 20px rgba(176, 38, 255, 0.5)',
+                boxShadow: "0 0 20px rgba(176, 38, 255, 0.5)",
               }}
             >
               {keyword}

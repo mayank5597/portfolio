@@ -68,7 +68,7 @@ const Philosophy = () => {
               <motion.h3
                 className={`text-4xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tighter ${
                   philosophy.color === "primary"
-                    ? "gradient-text"
+                    ? "bg-gradient-to-r from-white to-[#b026ff] bg-clip-text text-transparent"
                     : "text-accent"
                 }`}
                 whileHover={{ scale: 1.05 }}

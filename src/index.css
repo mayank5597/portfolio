@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-text {
-    background: linear-gradient(to right, #fff, #b026ff);
+    background: linear-gradient(to right, #ffffff, #b026ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

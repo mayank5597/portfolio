@@ -1,13 +1,20 @@
 /* eslint-disable no-unused-vars */
-import { motion } from 'framer-motion';
-import { Code2, Database, Layers, Zap } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Code2, Database, Layers, Zap } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
       icon: Code2,
       title: "Frontend Mastery",
-      skills: ["React.js", "Next.js", "React Native", "Tailwind CSS", "TypeScript", "shadcn/ui"],
+      skills: [
+        "React.js",
+        "Next.js",
+        "React Native",
+        "Tailwind CSS",
+        "TypeScript",
+        "shadcn/ui",
+      ],
       color: "primary",
     },
     {
@@ -25,16 +32,21 @@ const Skills = () => {
     {
       icon: Zap,
       title: "Performance & Tools",
-      skills: ["Lazy Loading", "Code Splitting", "Webpack", "Vite", "Docker", "AWS", "CI/CD"],
+      skills: [
+        "Lazy Loading",
+        "Code Splitting",
+        "Webpack",
+        "Vite",
+        "Docker",
+        "AWS",
+        "CI/CD",
+      ],
       color: "accent",
     },
   ];
 
   return (
-    <section 
-      data-testid="skills-section"
-      className="py-24 md:py-32 relative"
-    >
+    <section data-testid="skills-section" className="py-24 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,10 +56,14 @@ const Skills = () => {
           className="mb-16 text-center"
         >
           <h2 className="text-4xl md:text-5xl font-heading font-semibold tracking-tight mb-6">
-            The <span className="gradient-text">Craft</span>
+            The{" "}
+            <span className="bg-gradient-to-r from-white to-[#b026ff] bg-clip-text text-transparent">
+              Craft
+            </span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-            5+ years of turning coffee into code. Specialized in building scalable, performant web applications that users love.
+            5+ years of turning coffee into code. Specialized in building
+            scalable, performant web applications that users love.
           </p>
         </motion.div>
 
@@ -63,7 +79,7 @@ const Skills = () => {
 
 const SkillCard = ({ category, index }) => {
   const Icon = category.icon;
-  const isPrimary = category.color === 'primary';
+  const isPrimary = category.color === "primary";
 
   return (
     <motion.div
@@ -73,18 +89,20 @@ const SkillCard = ({ category, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ 
+      whileHover={{
         scale: 1.02,
-        borderColor: isPrimary ? 'rgba(176, 38, 255, 0.5)' : 'rgba(0, 240, 255, 0.5)',
+        borderColor: isPrimary
+          ? "rgba(176, 38, 255, 0.5)"
+          : "rgba(0, 240, 255, 0.5)",
       }}
     >
       {/* Glow effect on hover */}
       <motion.div
         className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
         style={{
-          background: isPrimary 
-            ? 'radial-gradient(circle at center, rgba(176, 38, 255, 0.1) 0%, transparent 70%)'
-            : 'radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%)',
+          background: isPrimary
+            ? "radial-gradient(circle at center, rgba(176, 38, 255, 0.1) 0%, transparent 70%)"
+            : "radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, transparent 70%)",
         }}
       />
 
@@ -92,12 +110,14 @@ const SkillCard = ({ category, index }) => {
         {/* Icon */}
         <motion.div
           className={`mb-4 inline-block p-3 rounded-lg ${
-            isPrimary ? 'bg-primary/10' : 'bg-accent/10'
+            isPrimary ? "bg-primary/10" : "bg-accent/10"
           }`}
           whileHover={{ rotate: [0, -10, 10, -10, 0] }}
           transition={{ duration: 0.5 }}
         >
-          <Icon className={`w-6 h-6 ${isPrimary ? 'text-primary' : 'text-accent'}`} />
+          <Icon
+            className={`w-6 h-6 ${isPrimary ? "text-primary" : "text-accent"}`}
+          />
         </motion.div>
 
         {/* Title */}
@@ -111,15 +131,15 @@ const SkillCard = ({ category, index }) => {
             <motion.span
               key={skillIndex}
               className={`px-3 py-1.5 text-sm font-mono rounded-md backdrop-blur-sm border ${
-                isPrimary 
-                  ? 'bg-primary/10 border-primary/30 text-primary' 
-                  : 'bg-accent/10 border-accent/30 text-accent'
+                isPrimary
+                  ? "bg-primary/10 border-primary/30 text-primary"
+                  : "bg-accent/10 border-accent/30 text-accent"
               }`}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: isPrimary 
-                  ? '0 0 15px rgba(176, 38, 255, 0.4)'
-                  : '0 0 15px rgba(0, 240, 255, 0.4)',
+                boxShadow: isPrimary
+                  ? "0 0 15px rgba(176, 38, 255, 0.4)"
+                  : "0 0 15px rgba(0, 240, 255, 0.4)",
               }}
             >
               {skill}

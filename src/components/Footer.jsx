@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import { Linkedin, Github, Mail, ExternalLink } from "lucide-react";
 
 const Footer = () => {
-  const linkedinUrl = "https://www.linkedin.com/in/mayank-gupta";
-
+  const linkedinUrl = "https://www.linkedin.com/in/mayank-gupta-447628151/";
+  const resumeUrl =
+    "https://drive.google.com/file/d/1_MjQcZa_Z869Hlocn9FQN-p5NxfC_smn/view?usp=sharing";
   return (
     <section
       data-testid="footer-section"
@@ -29,12 +30,12 @@ const Footer = () => {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <p className="text-sm font-mono text-accent mb-2">2024 - Present</p>
+            <p className="text-sm font-mono text-accent mb-2">2020 - Present</p>
             <h3 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-2">
-              Software Developer
+              MERN Developer
             </h3>
             <p className="text-lg text-primary font-semibold mb-4">
-              Programming.com
+              Programming.com | Ex Unthinkable Solutions
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <span className="px-4 py-2 text-sm bg-secondary/20 border border-primary/20 rounded-md text-muted-foreground">
@@ -60,12 +61,14 @@ const Footer = () => {
             <h2 className="text-4xl md:text-6xl font-heading font-bold tracking-tighter mb-6">
               <span className="block text-foreground">Still building.</span>
               <span className="block text-accent">Still learning.</span>
-              <span className="block gradient-text">Still shipping.</span>
+              <span className="block bg-gradient-to-r from-white to-[#b026ff] bg-clip-text text-transparent">
+                Still shipping.
+              </span>
             </h2>
           </motion.div>
 
           {/* CTA Button */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -87,7 +90,7 @@ const Footer = () => {
               Let's Build Something Together
               <ExternalLink className="w-5 h-5" />
             </motion.a>
-          </motion.div>
+          </motion.div> */}
 
           {/* Contact Info */}
           <motion.div
@@ -106,10 +109,19 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
                 <span>mayankgupta5597@gmail.com</span>
               </motion.a>
-              <span className="hidden sm:inline text-border">|</span>
+              <span className="hidden sm:inline text-white">|</span>
               <span className="flex items-center gap-2">
                 <span>+91 8077039526</span>
               </span>
+              <span className="hidden sm:inline text-white">|</span>
+              <motion.div
+                onClick={() => window.open(resumeUrl, "_blank")}
+                className="flex items-center gap-2 hover:text-accent transition-colors cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+              >
+                <ExternalLink className="w-5 h-5" />
+                <span>Resume</span>
+              </motion.div>
             </div>
 
             <div className="flex items-center justify-center gap-6">
@@ -127,7 +139,7 @@ const Footer = () => {
                 <Linkedin className="w-6 h-6" />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/mayank5597"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-secondary/20 border border-accent/20 text-accent hover:bg-accent/10 transition-all"
