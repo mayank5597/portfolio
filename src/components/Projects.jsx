@@ -223,8 +223,10 @@ const ProjectCard = ({ project, index }) => {
               <p className="text-sm font-mono text-primary">{project.role}</p>
             </div>
             <Code2
-              onClick={() => window.open(project.codeLink, "_blank")}
-              className="hidden md:block w-6 h-6 text-accent mt-2 md:mt-0 cursor-pointer"
+              onClick={() =>
+                project.codeLink && window.open(project.codeLink, "_blank")
+              }
+              className={`hidden md:block w-6 h-6 text-accent mt-2 md:mt-0 ${project.codeLink ? "cursor-pointer" : ""} ${project.codeLink ? "opacity-100" : "opacity-50"}`}
             />
           </div>
 
