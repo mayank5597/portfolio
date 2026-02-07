@@ -76,6 +76,7 @@ const Projects = () => {
         "AI Integration",
       ],
       metrics: { roles: "2", deployment: "Containerized" },
+      codeLink: "https://github.com/mayank5597/salesbot.ai",
     },
     {
       name: "MyScoot (Exly)",
