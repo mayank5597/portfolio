@@ -5,7 +5,7 @@ import { Linkedin, Github, Mail, ExternalLink } from "lucide-react";
 const Footer = () => {
   const linkedinUrl = "https://www.linkedin.com/in/mayank-gupta-447628151/";
   const resumeUrl =
-    "https://drive.google.com/file/d/1_MjQcZa_Z869Hlocn9FQN-p5NxfC_smn/view?usp=sharing";
+    "https://drive.google.com/file/d/1KO6-9ubz7p_51t_5kV478iODicAPuZLe/view?usp=sharing";
   return (
     <section
       data-testid="footer-section"
